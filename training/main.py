@@ -1,21 +1,10 @@
 from __future__ import absolute_import, division, print_function
 
-import base64
-#import IPython
-import matplotlib
-import matplotlib.pyplot as plt
-#import PIL.Image
-#import pyvirtualdisplay
-
 import tensorflow as tf
-import csv
 from pandas import DataFrame
 import pandas as pd
 import numpy as np
 import os
-import tempfile
-import zipfile
-import shutil
 import statistics as st
 
 from tf_agents.agents.dqn import dqn_agent
@@ -77,8 +66,6 @@ def main():
   PRB_B=360e3 #PRB bandwdith
   Ct=Nt*Seff*PRB_B #Total capacity a la cell
   Ct_allcells=Ct*n_BS #Total capacity in the system
-  #SAGBR=[Ct_allcells*0.6, Ct_allcells*0.4]
-  #MABR=np.multiply([0.8,0.8],Ct)
   pos_actions=[-3,0,3]
   n_rep=5  #Number of repetition per sample
   chunk_size=5000 #Number of samples read in each chunk. 
@@ -233,19 +220,13 @@ def main():
     num_steps=2).prefetch(3))
 
     iterator.append(iter(dataset[-1]))
-  '''
-    for _ in range(batch_size):
-      experience, unused_info = next(iterator)
-      train_loss = agents_tenants[k].train(experience).loss
-    step = agents_tenants[k].train_step_counter.numpy()'''
-
 
   print("Regular operation and training...")
   for it in range(bs_controller.time_step,int(max_steps)):
     if it%log_interval==0:
       print('Iteration: ',it)
 
-    #keep reading chunks from file
+    #Keep reading chunks from file
     if bs_controller.time_step%(chunk_size*n_rep)==0: 
       data_train_chunk=next(data_train)
       O_k_n_train, SAGBR_train, MCBR_train=obtain_data_from_dataset(data_train_chunk,n_rep,Ct_allcells, Ct)
