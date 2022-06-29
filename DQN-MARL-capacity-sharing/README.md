@@ -9,7 +9,7 @@ This folder contains the code for the training and evaluation of the DQN-MARL ca
 - **BS.py:** BS class. 
 - **common.py:** Python script with different functions for supporting the main operation.
 
-Example data to run the scripts are included in the subfolder **/data**, including: 
+Example data to run the scripts are included in the subfolder **/sample_data**, including: 
 - Training data in csv file to perform the training (training.py). 
 - Evaluation data in csv file to perform the evaluation (evaluation.py). This is also required by training.py if evaluation is performed during training. 
 - Saved policies by PolicySaver to held the evaluation (evaluation.py).
