@@ -13,7 +13,7 @@ Example data to training and evaluating the model are included in the folder **/
 - Training data in csv file to perform the training (training.py). 
 - Evaluation data in csv file to perform the evaluation (evaluation.py). This is also required by training.py if evaluation is performed during training.
 
-Moreover, **/sample_policies/** includes example policies already learnt to test the evaluation.py script. 
+Moreover, **/sample_policies** includes example policies already learnt to test the evaluation.py script. 
 - Saved policies by PolicySaver format of TF-Agents to held the evaluation (evaluation.py).
 
 
