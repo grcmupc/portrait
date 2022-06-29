@@ -9,10 +9,12 @@ This folder contains the code for the training and evaluation of the DQN-MARL ca
 - **BS.py:** BS class. 
 - **common.py:** Python script with different functions for supporting the main operation.
 
-Example data to run the scripts are included in the subfolder **/sample_data**, including: 
+Example data to training and evaluating the model are included in the folder **/sample_data**: 
 - Training data in csv file to perform the training (training.py). 
-- Evaluation data in csv file to perform the evaluation (evaluation.py). This is also required by training.py if evaluation is performed during training. 
-- Saved policies by PolicySaver to held the evaluation (evaluation.py).
+- Evaluation data in csv file to perform the evaluation (evaluation.py). This is also required by training.py if evaluation is performed during training.
+
+Moreover, **/sample_policies/** includes example policies already learnt to test the evaluation.py script. 
+- Saved policies by PolicySaver format of TF-Agents to held the evaluation (evaluation.py).
 
 
 
