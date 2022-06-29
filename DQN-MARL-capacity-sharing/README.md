@@ -3,7 +3,7 @@
 This folder contains the code for the training and evaluation of the DQN-MARL capacity sharing solution. It contains the following: 
 
 - **training.py:** Main function for performing the training in python. 
-- **evaluation.py:** Main function for performing the evaluation of trained policies. 
+- **evaluation.py:** Main function for performing the evaluation of trained policies. (To be uploded)
 - **environment_5G_multipleBS.py:** Python environment based on py_environment.PyEnvironment (required for interacting with DQN agents). 
 - **BS_controller.py:** BS_controller class. 
 - **BS.py:** BS class. 
