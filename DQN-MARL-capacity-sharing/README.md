@@ -1,4 +1,4 @@
-## DQN-MARL training
+## DQN-MARL Capacity sharing solution
 
 This folder contains the code for training the DQN-MARL capacity sharing solution. It contains the following: 
 
