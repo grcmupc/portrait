@@ -7,7 +7,7 @@ This folder contains the code for the training and evaluation of the DQN-MARL ca
 - **environment_5G_multipleBS.py:** Python environment based on py_environment.PyEnvironment (required for interacting with DQN agents). 
 - **BS_controller.py:** BS_controller class. 
 - **BS.py:** BS class. 
-- **common.py:** Python script with different functions for supporting the main operation.
+- **common.py:** Python script with different functions for supporting the training and evaluation operations.
 
 Example data to training and evaluating the model are included in the folder **/sample_data**: 
 - Training data in csv file to perform the training (training.py). (*To be uploaded*). 
