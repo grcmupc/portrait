@@ -156,21 +156,3 @@ class BS():
         self.SAGBR=SAGBR_chunk
         self.MABR=MCBR_chunk
         self.time_step_chunk=0
-
-
-
-'''
-#Test functions:
-bs=BS(2)
-bs.print_BS_configuration()
-state1_T1=bs.get_state(0)
-state1_T2=bs.get_state(1)
-bs.set_action(10,0)
-bs.set_action(-20,1)
-bs.run()
-reward_T1=bs.get_reward(0)
-reward_T2=bs.get_reward(1)
-state2_T1=bs.get_state(0)
-state2_T2=bs.get_state(1)
-print('finished')
-print(bs.k_tenants)'''
