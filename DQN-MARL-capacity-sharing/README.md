@@ -1,6 +1,6 @@
 ## DQN-MARL Capacity sharing solution
 
-This folder contains the code for the training and evaluation of the DQN-MARL capacity sharing solution. It contains the following: 
+This folder contains the code for the training and evaluation of the DQN-MARL capacity sharing solution, including the following python scripts: 
 
 - **training.py:** Main function for performing the training in python. 
 - **evaluation.py:** Main function for performing the evaluation of trained policies. (*To be uploded*)
