@@ -1,8 +1,11 @@
 from __future__ import absolute_import, division, print_function
 
 import base64
+#import IPython
 import matplotlib
 import matplotlib.pyplot as plt
+#import PIL.Image
+#import pyvirtualdisplay
 
 import tensorflow as tf
 import csv
@@ -82,7 +85,8 @@ def evaluation(k_tenants,bs_controller_eval,env_tenants_tf_eval,polices,file_nam
       bs_controller_eval.run()
 
     export_results(file_name+'_'+str(ev)+'.csv',bs_controller_eval)
-    export_convergence_results(bs_controller_eval,file_name_conv)
+    if file_name_conv!=(None):
+      export_convergence_results(bs_controller_eval,file_name_conv)
     print('Finished Evaluation...')
 
 def export_results(file_name,bs_contr):
