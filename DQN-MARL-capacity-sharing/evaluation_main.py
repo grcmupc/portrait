@@ -40,7 +40,7 @@ def main():
   n_rep=5  #Number of repetition per sample
   n_eval = 1 #Number of evaluations
 
-  file_name_evaluation='results_evaluation_week.csv'
+  file_name_evaluation='eval_sample.csv'
   eval_polices=[]
   filenames=[]
 
