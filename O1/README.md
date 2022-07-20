@@ -9,7 +9,8 @@ To support this, the following scripts are included in this folder:
 - **SFTP_client.py**: SFTP client python code for obtaining PM files from the SFTP server at the O-DU. 
 - **NETCONF_client_edit_config.py**: NETCONF client python code for performing the "edit-config" operation to configure rRRMPolicyDedicatedRatio per S-NSSAI attributes at the O-DU. 
 
-To be able to test the SFTP and NECONF clients of the DQN-MARL capacity sharing solution, 
+**/Sample_data/** includes sample NETCONF xml configurations of the *rRRMPolicyDedicatedRatio per S-NSSAI* and PM files. 
 
+**/Testing/** includes the docker-compose of a O-DU simulator used for testing the SFTP and NETCONF client codes. 
 
 
