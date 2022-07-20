@@ -12,5 +12,5 @@ Additionally, this folder includes the following elements for initializing and l
 - _3gpp-5g-common-yang-types.yang
 
 The following files are required for initializing the NETCONF server: 
-- example-models-configuration.ini: This one includes subcribes to _3gpp-nr-nrm-rrmpolicy.yang 
+- example-models-configuration.ini: Initialization file configuration for NETCONF server that includes _3gpp-nr-nrm-rrmpolicy.yang 
 - _3gpp-nr-nrm-rrmpolicy.xml: Initial *rRMPolicyDedicatedRatio per S-NSSAI* configuration values for the module _3gpp-nr-nrm-rrmpolicy.yang. 
