@@ -15,4 +15,4 @@ Additionally, the following subfolders are included:
 
 **/Testing/** includes the O-DU simulator used for testing the SFTP and NETCONF client codes.  
 
-See **/tutorials/O1_interface.ipynb** for further info on the O1 implementation. 
+See */tutorials/O1_interface.ipynb* for further info on the O1 implementation. 
