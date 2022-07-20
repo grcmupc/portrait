@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RRMPolicyRatio xmlns="urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy">
+  <id>1</id>
+  <attributes>
+    <resourceType>PRB</resourceType>
+    <rRMPolicyMemberList>
+      <mcc>214</mcc>
+      <mnc>01</mnc>
+      <sd>FFFFFF</sd>
+      <sst>1</sst>
+    </rRMPolicyMemberList>
+    <rRMPolicyMaxRatio>100</rRMPolicyMaxRatio>
+    <rRMPolicyMinRatio>0</rRMPolicyMinRatio>
+    <rRMPolicyDedicatedRatio>60</rRMPolicyDedicatedRatio>
+  </attributes>
+</RRMPolicyRatio>
+<RRMPolicyRatio xmlns="urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy">
+  <id>2</id>
+  <attributes>
+    <resourceType>PRB</resourceType>
+    <rRMPolicyMemberList>
+      <mcc>214</mcc>
+      <mnc>02</mnc>
+      <sd>FFFFFF</sd>
+      <sst>1</sst>
+    </rRMPolicyMemberList>
+    <rRMPolicyMaxRatio>100</rRMPolicyMaxRatio>
+    <rRMPolicyMinRatio>0</rRMPolicyMinRatio>
+    <rRMPolicyDedicatedRatio>40</rRMPolicyDedicatedRatio>
+  </attributes>
+</RRMPolicyRatio>
+

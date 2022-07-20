@@ -1,0 +1,148 @@
+module _3gpp-5g-common-yang-types {
+  yang-version 1.1;
+  namespace "urn:3gpp:sa5:_3gpp-5g-common-yang-types";
+  prefix "types5g3gpp";
+  
+  
+  import _3gpp-common-yang-types { prefix types3gpp; }
+
+  organization "3GPP SA5";
+  contact "https://www.3gpp.org/DynaReport/TSG-WG--S5--officials.htm?Itemid=464";
+  description "The model defines common types for 5G networks and 
+    network slicing.";
+  reference "3GPP TS 28.541";
+
+  revision 2021-08-05 { reference S5-214053/CR-0518; }
+  revision 2020-11-05 { reference CR-0412 ; }
+  revision 2019-10-20 { reference "Initial version."; }
+ 
+  grouping SNssai {
+    description 
+      "Single Network Slice Selection Assistance Information(S-NSSAI)";
+    reference "3GPP TS 23.003";
+  
+    leaf sd {
+      description "Slice Differentiator
+        If not needed, the value can be set to FFFFFF.";
+      type string{
+        length 6;
+        pattern '[a-fA-F0-9]*';
+      }
+      reference "3GPP TS 23.003";
+    }
+    
+    leaf sst {
+      type uint8;
+      description "Slice/Service Type.
+         Values 0 to 127 belong to standardized SST range and are defined in 
+         3GPP TS 23.501. Values 128 to 255 belong to operator-specific range.";
+    }
+  }
+    
+  grouping PLMNInfo {
+    description "The PLMNInfo data type define a S-NSSAI member in a specific 
+      PLMNId, and it have two attributes PLMNId and S-NSSAI (PLMNId, S-NSSAI). 
+      The PLMNId represents a data type that is comprised of mcc 
+      (mobile country code) and mnc (mobile network code), (See TS 23.003 
+      subclause 2.2 and 12.1) and S-NSSAI represents an data type, that is 
+      comprised of an SST (Slice/Service type) and an optional 
+      SD (Slice Differentiator) field";
+    uses types3gpp:PLMNId;
+    uses SNssai;
+  }
+
+  typedef CommModelType {
+    reference "3GPP TS 23501";
+    type enumeration {
+      enum DIRECT_COMMUNICATION_WO_NRF {
+        value 0;
+        description "Directly communicate to other pre-configured NF service.";
+      }
+
+      enum DIRECT_COMMUNICATION_WITH_NRF {
+        value 1;
+        description "Directly communicate to other NF service discovered 
+          by NRF.";
+      }
+
+      enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY {
+        value 2;
+        description "Communicate to pre-configured other NF service through 
+          SCP as a proxy.";
+      }
+
+      enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY {
+        value 3;
+        description "Communication to NF service discovered by NRF through SCP 
+          as a proxy.";
+      }
+
+    }
+  }
+  
+  grouping CommModel {
+    leaf groupId {
+      type uint16;   
+    }
+    leaf commModelType {
+      type CommModelType;
+    }  
+    leaf-list targetNFServiceList {      
+      type types3gpp:DistinguishedName;    
+    }
+    leaf commModelConfiguration {
+      type string;
+    }  
+  }
+  
+  grouping SupportedFunc {
+    leaf function {
+      type string;   
+    }
+    leaf policy {
+      type string;
+    }  
+  }
+
+  typedef EnergySavingLoadThresholdT {
+    type uint32 {
+      range 0..10000;
+    }
+    units 1/10000;
+  }
+
+  typedef EnergySavingTimeDurationT {
+    type uint32 {
+      range 0..900;
+    }
+    units seconds;
+  }
+
+  typedef PhysCellID {
+    type uint32 { 
+      range "0..1007"; 
+    }
+    reference "clause 7.4.2 of TS 38.211";
+  }
+
+  typedef UTC24TimeOfDayT {
+    description "Time of day in HH:MM or H:MM 24-hour format per UTC 
+      time zone.";
+    type string {
+      pattern "(([01]?[0-9])|(2[0-3])):([0-5][0-9])";
+    }
+  }
+
+  typedef DayOfWeekT {
+    type enumeration {
+      enum Monday;
+      enum Tuesday;
+      enum Wednesday;
+      enum Thursday;
+      enum Friday;
+      enum Saturday;
+      enum Sunday;
+    }
+  }
+
+}

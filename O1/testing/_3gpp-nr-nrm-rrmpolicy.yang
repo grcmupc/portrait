@@ -1,0 +1,128 @@
+module _3gpp-nr-nrm-rrmpolicy {
+  yang-version 1.1;
+  namespace "urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy";
+  prefix "nrrrmpolicy3gpp";
+
+  import _3gpp-5g-common-yang-types { prefix types5g3gpp; }
+  import _3gpp-common-top { prefix top3gpp; }
+
+  organization "3GPP SA5";
+  contact "https://www.3gpp.org/DynaReport/TSG-WG--S5--officials.htm?Itemid=464";
+  description "Defines the YANG mapping of the RRMPolicy abstract class that 
+    is part of the NR Network Resource Model (NRM).";
+  reference "3GPP TS 28.541 5G Network Resource Model (NRM)";
+
+  revision 2020-11-05 { reference CR-0412 ; }
+  revision 2020-04-28 { reference "CR0285"; }
+  revision 2020-02-14 { reference "Initial revision"; }
+
+  grouping rRMPolicyMemberGrp {
+    description "This data type represents an RRM Policy member that will be 
+      part of a rRMPolicyMemberList. A RRMPolicyMember is defined by its 
+      pLMNId and sNSSAI (S-NSSAI).
+      The members in a rRMPolicyMemberList are assigned a specific amount of 
+      RRM resources based on settings in RRMPolicy.";
+
+    uses types5g3gpp:PLMNInfo;
+  }
+
+  typedef CyclicPrefix {
+    type enumeration {
+      enum NORMAL;
+      enum EXTENDED; 
+    }
+  }
+
+  grouping RRMPolicy_Grp {
+    description "This IOC represents the properties of an abstract RRMPolicy
+      . The RRMPolicy_ IOC needs to be subclassed to be instantiated. 
+      It defines two attributes apart from those inherited from Top IOC, the 
+      resourceType attribute defines type of resource (PRB, RRC
+      connected users, DRB usage etc.) and the rRMPolicyMemberList attribute 
+      defines the RRMPolicyMember(s)that are subject to this policy. 
+      An RRM resource (defined in resourceType
+      attribute) is located in NRCellDU, NRCellCU, GNBDUFunction, 
+      GNBCUCPFunction or in GNBCUUPFunction. The RRMPolicyRatio IOC is one 
+      realization of a RRMPolicy_ IOC. This RRM framework allows adding new 
+      policies, both standardized (like RRMPolicyRatio) or as vendor specific, 
+      by inheriting from the abstract RRMPolicy_ IOC.";
+
+    leaf resourceType {
+      description "The resourceType attribute defines type of resource (PRB, 
+        RRC connected users, DRB usage etc.) that is subject to policy. 
+       Valid values are 'PRB', 'PRB_UL', 'PRB_DL', 'RRC' or 'DRB'";
+      mandatory true;
+      type enumeration {
+        enum PRB;
+        enum PRB_UL;
+        enum PRB_DL;
+        enum RRC;
+        enum DRB;
+      }
+    }
+
+    list rRMPolicyMemberList{
+      description "It represents the list of RRMPolicyMember (s) that the 
+        managed object is supporting. A RRMPolicyMember <<dataType>> include 
+        the PLMNId <<dataType>> and S-NSSAI <<dataType>>." ;
+      min-elements 1;
+      key "mcc mnc sd sst";
+      uses rRMPolicyMemberGrp;
+    }
+  } // grouping
+
+
+  grouping RRMPolicyRatioGrp {
+    description "Represents the RRMPolicyRatio concrete IOC.";
+
+    uses RRMPolicy_Grp;    // Inherits RRMPolicy_
+
+
+    leaf rRMPolicyMaxRatio {
+      description " This attribute specifies the maximum percentage of radio 
+       resource that can be used by the associated rRMPolicyMemberList. 
+       The maximum percentage of radio resource include at least one of 
+       the shared resources, prioritized resources and dedicated resources.
+       The sum of the rRMPolicyMaxRatio values assigned to all RRMPolicyRatio(s) 
+       name-contained by same ManagedEntity can be greater that 100.";
+      default 100;
+      type uint8 { range "0..100"; }
+      units percent;
+    }
+
+    leaf rRMPolicyMinRatio {
+      description " This attribute specifies the minimum percentage of radio 
+        resources that can be used by the associated rRMPolicyMemberList. 
+        The minimum percentage of radio resources including at least one of 
+        prioritized resources and dedicated resources. The sum of the 
+        rRMPolicyMinRatio values assigned to all RRM PolicyRatio(s)
+        name-contained by same ManagedEntity shall be less or equal 100.";
+      default 0;
+      type uint8 { range "0..100"; }
+      units percent;
+    }
+
+    leaf rRMPolicyDedicatedRatio {
+      description " This attribute specifies the percentage of radio resource 
+        that dedicatedly used by the associated rRMPolicyMemberList. The sum of
+        the rRMPolicyDeidctaedRatio values assigned to all RRMPolicyRatio(s)
+        name-contained by same ManagedEntity shall be less or equal 100. ";
+      default 0;
+      type uint8 { range "0..100"; }
+      units percent;
+      }
+    }
+
+  list RRMPolicyRatio {
+    description " The RRMPolicyRatio IOC is one realization of a RRMPolicy_ IOC, 
+      see the inheritance in Figure 4.2.1.2-1. This RRM framework allows 
+      adding new policies, both standardized (like RRMPolicyRatio) or as 
+      vendor specific, by inheriting from the 
+      abstract RRMPolicy_ IOC. For details see subclause 4.3.36.";
+    key id;
+    uses top3gpp:Top_Grp;
+    container attributes {
+      uses RRMPolicyRatioGrp;
+    }
+  }
+}
