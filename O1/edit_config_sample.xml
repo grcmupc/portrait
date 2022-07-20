@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nc:rpc xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" 
+		message-id="urn:uuid:edb2c826-1bb6-4837-b3f3-57524d8d31d3">
+		<nc:edit-config>
+			<nc:target>
+				<nc:running/>
+			</nc:target>
+			<nc:test-option>set</nc:test-option>
+			<nc:config>
+				<RRMPolicyRatio xmlns="urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy">
+					<id>1</id>
+					<attributes>
+						<rRMPolicyDedicatedRatio>57</rRMPolicyDedicatedRatio>
+					</attributes>
+				</RRMPolicyRatio>
+				<RRMPolicyRatio xmlns="urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy">
+					<id>2</id><attributes>
+					<rRMPolicyDedicatedRatio>42</rRMPolicyDedicatedRatio>
+				</attributes></RRMPolicyRatio>
+			</nc:config>
+		</nc:edit-config>
+	</nc:rpc>

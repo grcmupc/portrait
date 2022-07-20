@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<md:MeasDataFile xmlns:md="http://www.3gpp.org/ftp/specs/archive/28_series/28.550#measData" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.3gpp.org/ftp/specs/archive/28_series/28.550#measData measData.xsd">>
+  <md:fileHeader fileFormatVersion="28.550 V16.0" vendorName="" dnPrefix="">
+    <md:fileSender senderName="Cell1" senderType="O-DU" /> 
+    <md:MeasData beginTime="2022-07-01T08:00:00" />
+  </md:fileHeader>
+  <md:measData>
+    <md:measuredEntity userLabel="NRCell0" localDn="" swVersion="" />
+    <md:measInfo measInfoId="RRU_block">
+      <md:job jobId="job0001" />
+      <md:granPeriod duration="PT900S" endTime="2021-12-01T08:15:00" />
+      <md:repPeriod duration="PT900S" />
+      <md:measType p="1" >RRU.PrbUsedDl.1</md:measType>
+      <md:measType p="2" >RRU.PrbUsedDl.2</md:measType>
+      <md:measType p="3" >RRU.RRU.PrbAvailDl</md:measType>
+      <md:measValue measObjLdn="">
+       <md:r p="1">20</md:r>
+       <md:r p="2">25</md:r>
+       <md:r p="3">20</md:r>
+        <md:suspect>true</md:suspect>
+      </md:measValue>
+    </md:measInfo>
+    <md:measInfo measInfoId="QoSFlow_block">
+      <md:job jobId="job0002" />
+      <md:granPeriod duration="PT900S" endTime="2021-12-01T08:15:00" />
+      <md:repPeriod duration="PT900S" />
+      <md:measType p="4" >QosFlsow.PdcpPduVolumeDL.1</md:measType>
+      <md:measType p="5" >QosFlow.PdcpPduVolumeDL.2</md:measType>
+      <md:measValue measObjLdn="">
+       <md:r p="4">32327</md:r>
+       <md:r p="5">40751</md:r>
+        <md:suspect>true</md:suspect>
+      </md:measValue>
+    </md:measInfo>
+  </md:measData>
+  <md:fileFooter>
+    <md:MeasData endTime="2022-07-01T08:15:00" />
+  </md:fileFooter>
+</md:MeasDataFile>
