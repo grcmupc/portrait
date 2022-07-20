@@ -6,16 +6,15 @@ Welcome to the Gihub repository of the **DQN-MARL capacity sharing solution**, a
 
 Current development of the solution focuses on a Proof of Concept (PoC) of this solution, which is included in the [PORTRAIT project](https://portrait.upc.edu/). 
 
-## Reference
-A detailed description of the operation of the DQN-MARL capacity sharing solution has been published in our paper:
-*   [A Multi-Agent Reinforcement Learning Approach for Capacity Sharing in Multi-Tenant Scenarios](https://ieeexplore.ieee.org/abstract/document/9497684)
-
-
 ## Contents
 
 - [DQN-MARL-capacity-sharing](DQN-MARL-capacity-sharing): Includes the Python code for training and evaluating the solution. 
 - [O1](O1): Includes the implementation of the O1 interface the inference of the DQN-MARL capacity sharing solution.
 - [Tutorials](Tutorials): Tutorials on the major components of the solution are available. 
+
+## Reference
+A detailed description of the operation of the DQN-MARL capacity sharing solution has been published in our paper:
+*   [A Multi-Agent Reinforcement Learning Approach for Capacity Sharing in Multi-Tenant Scenarios](https://ieeexplore.ieee.org/abstract/document/9497684)
 
 
 ## Contributors
