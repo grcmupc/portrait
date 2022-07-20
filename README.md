@@ -4,7 +4,7 @@
 
 Welcome to the Gihub repository of the DQN-MARL capacity sharing solution, a solution for dynamically distributing the capacity in multiple RAN nodes among multiple tenants, each of them provided with a RAN slice. The capacity sharing is performed so that the traffic demands and Service Level Agreement (SLA) of the different tenant are satisfied and the resources in the different RAN nodes are efficiently used. 
 
-Current development of the solution focuses on a Proof of Concept (PoC) of this solution, which is included in the PORTRAIT project. 
+Current development of the solution focuses on a Proof of Concept (PoC) of this solution, which is included in the [PORTRAIT project](https://portrait.upc.edu/). 
 
 ## Reference
 A detailed description of the operation of the DQN-MARL capacity sharing solution has been published in our paper:
