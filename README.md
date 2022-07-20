@@ -12,10 +12,12 @@ Current development of the solution focuses on a Proof of Concept (PoC) of this 
 - [O1](O1): Includes the implementation of the O1 interface the inference of the DQN-MARL capacity sharing solution.
 - [Tutorials](Tutorials): Tutorials on the major components of the solution are available. 
 
-## Reference
+## References
 A detailed description of the operation of the DQN-MARL capacity sharing solution has been published in our paper:
 *   [A Multi-Agent Reinforcement Learning Approach for Capacity Sharing in Multi-Tenant Scenarios](https://ieeexplore.ieee.org/abstract/document/9497684)
 
+The description implemented solution in this Github repository has been submitted in the *IEEE GLOBECOM 2022 workshop on NextGenRAN*. The preprint version is the following: 
+* *(Pending)* 
 
 ## Contributors
 The solution has been designed and developed by [Mobile Communications Research Group (GRCM)](https://grcm.tsc.upc.edu/en) of the Department of Signal Theory and Communications (TSC) of Universitat Politècnica de Catalunya (UPC). Within the group, we would like to recognize the following individuals for their code contributions, discussions, and other work to make the DQN-MARL capacity sharing library:
