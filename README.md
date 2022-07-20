@@ -19,7 +19,7 @@ A detailed description of the operation of the DQN-MARL capacity sharing solutio
 
 
 ## Contributors
-The solution has been designed and developed by Mobile Communications Research Group (GRCM) of the Department of Signal Theory and Communications (TSC) of Universitat Politècnica de Catalunya (UPC). Within the group, we would like to recognize the following individuals for their code contributions, discussions, and other work to make the DQN-MARL capacity sharing library:
+The solution has been designed and developed by [Mobile Communications Research Group (GRCM)](https://grcm.tsc.upc.edu/en) of the Department of Signal Theory and Communications (TSC) of Universitat Politècnica de Catalunya (UPC). Within the group, we would like to recognize the following individuals for their code contributions, discussions, and other work to make the DQN-MARL capacity sharing library:
 - Irene Vilà
 - Jordi Pérez-Romero
 - Oriol Sallent
