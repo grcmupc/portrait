@@ -6,7 +6,7 @@ This folder includes the O-DU elements used for testing the NETCONF and SFTP cli
 
 The deployment of these containers can be deployed by running the **docker-compose.yml** script included here. 
 
-Additionally, this folder includes the following elements for initializing and loading the YANG modules in the NETCONF server: 
+Additionally, this folder includes the following YANG modules that need to be included in the NETCONF server to support the configuration of the *rRMPolicyDedicatedRatio per S-NSSAI*: 
 - _3gpp-nr-nrm-rrmpolicy.yang
 - _3gpp-common-yang-types.yang
 - _3gpp-5g-common-yang-types.yang
