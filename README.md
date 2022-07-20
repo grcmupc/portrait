@@ -28,7 +28,7 @@ The solution has been designed and developed by Mobile Communications Research G
 ## Citations
 If you use this code, please cite it as:
 ```
-@misc{TFAgents,
+@misc{DQN-MARL-capacity-sharing,
   title = {DQN-MARL capacity sharing solution},
   author = {Irene Vilà, Jordi-Pérez Romero, Oriol Sallent, Anna Umbert},
   howpublished = {\url{https://github.com/grcmupc/portrait}},
