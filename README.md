@@ -8,7 +8,7 @@ Current development of the solution focuses on a Proof of Concept (PoC) of this 
 
 - [DQN-MARL-capacity-sharing](DQN-MARL-capacity-sharing): Includes the Python code for training and evaluating the solution. 
 - [O1](O1): Includes the implementation of the O1 interface the inference of the DQN-MARL capacity sharing solution.
-- [Tutorials](Tutorials): Tutorials on the major components of the solution are available. 
+- [Tutorials](tutorials): Tutorials on the major components of the solution are available. 
 
 ## References
 A detailed description of the operation of the DQN-MARL capacity sharing solution has been published in our paper:
