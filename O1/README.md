@@ -14,3 +14,4 @@ Additionally, the following subfolders are included:
 **/Sample_data/** includes sample NETCONF xml configurations of the *rRRMPolicyDedicatedRatio per S-NSSAI* and PM files. 
 
 **/Testing/** includes the O-DU simulator used for testing the SFTP and NETCONF client codes.  
+
