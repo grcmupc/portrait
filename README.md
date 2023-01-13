@@ -6,7 +6,7 @@ Current development of the solution focuses on a Proof of Concept (PoC) of this 
 
 ## Contents
 
-- [DQN-MARL-capacity-sharing](DQN-MARL-capacity-sharing): Includes the Python code for training and evaluating the solution. 
+- [DQN-MARL-capacity-sharing](DQN-MARL-capacity-sharing): Includes the Python code for training and evaluating the solution based on TF-Agents. 
 - [O1](O1): Includes the implementation of the O1 interface the inference of the DQN-MARL capacity sharing solution.
 - [Tutorials](tutorials): Tutorials on the major components of the solution are available. 
 
